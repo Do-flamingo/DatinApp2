@@ -99,7 +99,6 @@ namespace DatingApp.API.Controllers {
             currentMainPhoto.IsMain = false;
 
             photoFromRepo.IsMain = true;
-            
 
             if (await _repo.SaveAll ())
                 return NoContent ();
@@ -127,8 +126,7 @@ namespace DatingApp.API.Controllers {
 
                 if (result.Result == "ok")
                     _repo.Delete (photoFromRepo);
-            }
-            else {
+            } else {
                 _repo.Delete (photoFromRepo);
             }
 
